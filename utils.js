@@ -7,14 +7,23 @@ const sayHello = () => {
 }
 
 const area = (w, h) => {
+  if (w < 0 || h < 0) {
+    return null
+  } else
   return w * h
 }
 
 const perimeter = (w, h) => {
+  if (w < 0 || h < 0) {
+    return null
+  } else
   return 2 * (w + h)
 }
 
 const circleArea = r => {
+  if (r < 0) {
+    return null
+  } else
   return Math.PI * r * r
 
 }

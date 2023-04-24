@@ -32,10 +32,20 @@ it('should calculate the area', function() {
 
 })
 
+it('should return null if height or width is negative', function() {
+  const area = utils.area(-5, 10)
+  expect(area).to.be.null
+})
+
 it('should calculate the perimeter', function() {
   const perimeter = utils.perimeter(5, 10)
   expect(perimeter).to.be.a('number')
   expect(perimeter).to.equal(30)
+})
+
+it('should return null if height or width is negative', function() {
+  const perimeter = utils.perimeter(-5, 10)
+  expect (perimeter).to.be.null
 })
 
 it('should calculate the area of a circle', function() {
@@ -44,6 +54,10 @@ it('should calculate the area of a circle', function() {
   expect(circleArea).to.equal(78.53981633974483)
 })
 
+it('should return null if radius is negative', function() {
+  const circleArea = utils.circleArea(-5)
+  expect(circleArea).to.be.null
+})
 
 // ========================================================
 // Level 2 Challenges
